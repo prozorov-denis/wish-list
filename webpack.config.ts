@@ -1,5 +1,5 @@
 import path from "path";
-import { Configuration } from "webpack";
+import type { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({

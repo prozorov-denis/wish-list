@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
-    "lint": "npx eslint --ext .jsx,.js,.tsx,.ts src/",
+    "lint": "npx eslint --ext .jsx,.js,.tsx,.ts ./",
     "prettier": "prettier --write ."
   },
   "keywords": [],
