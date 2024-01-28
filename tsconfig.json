@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "strict": true,
+    "module": "es6",
+    "target": "es6",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+    },
+  },
+}
