@@ -1,6 +1,7 @@
 import type { FC } from "react";
-import { WishListCard } from "@/components/wish-list-card";
 import type { WishList } from "../types";
+import { Header } from "./Header";
+import { Typography } from "@mui/material";
 
 interface WishListDetailedProps {
   wishListId: number;
@@ -15,7 +16,8 @@ export const WishListDetailed: FC<WishListDetailedProps> = ({ wishListId }) => {
 
   return (
     <>
-      <WishListCard title={wishList.title} description={wishList.description} />
+      <Header title={wishList.title} />
+      <Typography>{wishList.description}</Typography>
     </>
   );
 };
