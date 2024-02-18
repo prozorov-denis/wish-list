@@ -1,10 +1,16 @@
 import path from "path";
+import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import type { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.resolve(__dirname, "public", "index.html"),
 });
+
+const devServer: DevServerConfiguration = {
+  historyApiFallback: true,
+  open: true,
+};
 
 const config: Configuration = {
   mode: "development",
@@ -13,6 +19,7 @@ const config: Configuration = {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "build"),
     clean: true,
+    publicPath: "/",
   },
   plugins: [htmlWebpackPlugin],
   devtool: "inline-source-map",
@@ -44,6 +51,7 @@ const config: Configuration = {
     },
     extensions: [".tsx", ".ts", ".js"],
   },
+  devServer,
 };
 
 export default config;
