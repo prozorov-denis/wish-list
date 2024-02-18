@@ -1,11 +1,6 @@
 import type { FC } from "react";
 import { WishListCard } from "@/components/wish-list-card";
-
-interface WishList {
-  id: number;
-  title: string;
-  description: string;
-}
+import type { WishList } from "../types";
 
 const wishListsArray: WishList[] = [
   {
